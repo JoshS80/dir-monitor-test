@@ -10,7 +10,7 @@ namespace fs_directory
 {
 	namespace monitor
 	{
-		std::unique_ptr<platform::CDirectoryMonitor> GetDirectoryMonitor(const std::filesystem::path& monitorPath)
+		std::unique_ptr<CDirectoryMonitorBase> GetDirectoryMonitor(const std::filesystem::path& monitorPath)
 		{
 			return std::make_unique<platform::CDirectoryMonitor>(monitorPath);
 		}
